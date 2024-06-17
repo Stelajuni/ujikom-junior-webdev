@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,6 +24,9 @@ Route::middleware('auth')->group(function () {
 
     //user
     Route::get('users', [UserController::class, 'index'])->name('users.index');
+
+    //employee
+    Route::get('employees', [EmployeeController::class, 'index'])->name('employees.index');
 });
 
 

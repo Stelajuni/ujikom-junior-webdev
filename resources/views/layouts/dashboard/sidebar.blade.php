@@ -44,13 +44,13 @@
                 </li>
 
                 <li class="
-                @if (request()->url() == '#')
+                @if (request()->url() == route('employees.index'))
                     active
                 @endif
                 ">
-                    <a href="#ui-elements" class="iq-waves-effect" ><span
+                    <a href="{{ route('employees.index')}}" class="iq-waves-effect" ><span
                         class="ripple rippleEffect"></span><i
-                        class="lab la-elementor iq-arrow-left"></i><span>Detail Pegawai</span></a>
+                        class="lab la-elementor iq-arrow-left"></i><span>Courier Details</span></a>
                 </li>
 
                 <li class="

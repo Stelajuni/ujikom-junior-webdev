@@ -1,14 +1,36 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <div class="card">
-        <div class="card-header">
-            Featured
+    <div class="iq-card">
+        <div class="iq-card-header d-flex justify-content-between align-items-center">
+            <div class="iq-header-title">
+                <h4 class="card-title">User List</h4>
+            </div>
         </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="iq-card-body">
+            <div class="table-responsive">
+                <table id="user-list-table" class="table table-striped table-bordered mt-4" role="grid"
+                    aria-describedby="user-list-page-info">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Join Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($users as $user)
+                            <tr>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->created_at->format('d M Y, H:i:s') }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 @endsection
+
+

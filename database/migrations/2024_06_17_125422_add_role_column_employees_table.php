@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('employee', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('employees', function (Blueprint $table) {
+            $table->enum('role', ['employee', 'admin'])
+                ->default('employee');
         });
     }
 
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('employee');
+        //
     }
 };
