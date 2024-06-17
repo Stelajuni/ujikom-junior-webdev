@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>STEY COMPANY</title>
+    <title>NUSANTARA EXPRESS</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -46,7 +46,7 @@
             <a href="index.html" class="logo d-flex align-items-center me-auto">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1 class="sitename">STEY COMPANY</h1>
+                <h1 class="sitename">NUSANTARA EXPRESS</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -95,8 +95,8 @@
                 <div class="row gy-4">
                     <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
                         data-aos="zoom-out">
-                        <h1>Better Solutions For Your Business</h1>
-                        <p>We are team of talented designers making websites with Bootstrap</p>
+                        <h1>Express Is The Best Solution</h1>
+                        <p>Ready to Send Anytime, Anywhere.</p>
                         <div class="d-flex">
                             <a class="btn-get-started" href="{{route('login')}}">Login</a>
                         </div>
