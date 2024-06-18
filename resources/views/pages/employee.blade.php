@@ -19,7 +19,7 @@
                             <th>Name</th>
                             <th>Phone Number</th>
                             <th>Email</th>
-                            <th>Role</th>
+                            {{-- <th>Role</th> --}}
                             <th>Join Date</th>
                             <th>Action</th>
                         </tr>
@@ -36,7 +36,7 @@
                                     @endif
                                 </td>
                                 <td>{{ $employee->email }}</td>
-                                <td>
+                                {{-- <td>
                                     @if ($employee->role == 'admin')
                                         <span class="badge badge-primary">
                                             <i class="ri-user-star-fill"></i>
@@ -46,7 +46,7 @@
                                             <i class="ri-user-fill"></i>
                                             Kurir</span>
                                     @endif
-                                </td>
+                                </td> --}}
                                 <td>{{ $employee->created_at->format('d M Y, H:i:s') }}</td>
                                 <td>
                                     <div class="flex align-items-center list-user-action">
@@ -55,8 +55,8 @@
                                             <i class="ri-pencil-line"></i></a>
 
                                         <a onclick="deleteEmployee('{{ $employee->id }}')" data-toggle="tooltip"
-                                            data-placement="top" title="" data-original-title="Delete"
-                                            href="#"><i class="ri-delete-bin-line"></i></a>
+                                            data-placement="top" title="" data-original-title="Delete" href="#">
+                                            <i class="ri-delete-bin-line"></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -67,7 +67,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal Tambah Pengguna -->
     <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -91,22 +91,21 @@
 
                         <div class="form-group">
                             <label for="addPhoneNumber">Phone Number</label>
-                            <input required type="phone_number" class="form-control" id="addPhoneNumber"
-                                name="addPhoneNumber">
+                            <input required type="text" class="form-control" id="addPhoneNumber" name="phone_number">
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="addRole">Role</label>
                             <select class="form-control" id="addRole" name="role">
                                 <option value="admin">Admin</option>
-                                <option value="employee" selected>Kurir</option>
+                                <option value="kurir" selected>Kurir</option>
                             </select>
-                        </div>
+                        </div> --}}
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="addPassword">Password</label>
                             <input required type="password" class="form-control" id="addPassword" name="password">
-                        </div>
+                        </div> --}}
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -117,6 +116,7 @@
         </div>
     </div>
 
+    <!-- Modal Ubah Pengguna -->
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -140,22 +140,22 @@
 
                         <div class="form-group">
                             <label for="editPhoneNumber">Phone Number</label>
-                            <input required type="phone_number" class="form-control" id="editPhoneNumber"
+                            <input required type="text" class="form-control" id="editPhoneNumber"
                                 name="phone_number">
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="editRole">Role</label>
                             <select class="form-control" id="editRole" name="role">
                                 <option value="admin">Admin</option>
-                                <option value="employee" selected>Kurir</option>
+                                <option value="kurir" selected>Kurir</option>
                             </select>
-                        </div>
+                        </div> --}}
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="editPassword">Password</label>
                             <input required type="password" class="form-control" id="editPassword" name="password">
-                        </div>
+                        </div> --}}
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -186,63 +186,7 @@
                 $('#editForm .invalid-feedback').remove();
         })
 
-        // function createEmployee() {
-        //     const url = "{{ route('api.employees.store') }}";
-
-        //     // ambil form data
-        //     let data = {
-        //         name: $('#addName').val(),
-        //         phone_number: $('#addPhoneNumber').val(),
-        //         email: $('#addEmail').val(),
-        //         password: $('#addPassword').val(),
-        //     }
-
-        //     // kirim data ke server POST
-        //     $.post(url, data)
-        //         .done((response) => {
-        //             // tampilkan pesan sukses
-        //             toastr.success(response.message, 'Sukses')
-
-        //             // reload halaman setelah 3 detik
-        //             setTimeout(() => {
-        //                 location.reload()
-        //             }, 3000);
-        //         })
-        //         .fail((error) => {
-        //             // ambil response error
-        //             let response = error.responseJSON
-
-        //             // tampilkan pesan error
-        //             toastr.error(response.message, 'Error')
-
-        //             // tampilkan error validation
-        //             if (response.errors) {
-        //                 // loop object errors
-        //                 for (const error in response.errors) {
-        //                     // cari input name yang error pada #addForm
-        //                     let input = $(`#addForm input[name="${error}"]`)
-
-        //                     // tambahkan class is-invalid pada input
-        //                     input.addClass('is-invalid');
-
-        //                     // buat elemen class="invalid-feedback"
-        //                     let feedbackElement = `<div class="invalid-feedback">`
-        //                     feedbackElement += `<ul class="list-unstyled">`
-        //                     response.errors[error].forEach((message) => {
-        //                         feedbackElement += `<li>${message}</li>`
-        //                     })
-        //                     feedbackElement += `</ul>`
-        //                     feedbackElement += `</div>`
-
-        //                     // tambahkan class invalid-feedback setelah input
-        //                     input.after(feedbackElement)
-        //                 }
-        //             }
-        //         })
-        // }
-
         function createEmployee() {
-            console.log('createEmployee function called');
             const url = "{{ route('api.employees.store') }}";
 
             // ambil form data
@@ -250,15 +194,13 @@
                 name: $('#addName').val(),
                 phone_number: $('#addPhoneNumber').val(),
                 email: $('#addEmail').val(),
-                password: $('#addPassword').val(),
+                // password: $('#addPassword').val(),
+                // role: $('#addRole').val() // pastikan role juga disertakan
             }
 
-            console.log('Data to be sent:', data);
-
-            // kirim data ke server POST
+            // kirim data ke server POST /employees
             $.post(url, data)
                 .done((response) => {
-                    console.log('Response:', response);
                     // tampilkan pesan sukses
                     toastr.success(response.message, 'Sukses')
 
@@ -268,7 +210,6 @@
                     }, 3000);
                 })
                 .fail((error) => {
-                    console.log('Error:', error);
                     // ambil response error
                     let response = error.responseJSON
 
@@ -301,7 +242,6 @@
                 })
         }
 
-
         function editEmployee() {
             let url = "{{ route('api.employees.update', ':employeeId') }}";
             url = url.replace(':employeeId', employeeId);
@@ -311,12 +251,12 @@
                 name: $('#editName').val(),
                 phone_number: $('#editPhoneNumber').val(),
                 email: $('#editEmail').val(),
-                password: $('#editPassword').val(),
-                role: $('#editRole').val(),
-                _method: 'PUT'
+                // password: $('#editPassword').val(),
+                // role: $('#editRole').val(),
+                // _method: 'PUT'
             }
 
-            // kirim data ke server POST /users
+            // kirim data ke server POST /employees
             $.post(url, data)
                 .done((response) => {
                     // tampilkan pesan sukses
@@ -391,20 +331,21 @@
         }
 
         function openEditModal(id) {
-            // mengisi variabel userId dengan id yang dikirim dari tombol edit
+            // mengisi variabel employeeId dengan id yang dikirim dari tombol edit
             employeeId = id;
 
-            // ambil data user dari server
+            // ambil data employee dari server
             let url = `{{ route('api.employees.show', ':employeeId') }}`;
             url = url.replace(':employeeId', employeeId);
 
-            // ambil data user
+            // ambil data employee
             $.get(url)
                 .done((response) => {
-                    // isi form editModal dengan data user
+                    // isi form editModal dengan data employee
                     $('#editName').val(response.data.name);
                     $('#editPhoneNumber').val(response.data.phone_number);
                     $('#editEmail').val(response.data.email);
+                    // $('#editRole').val(response.data.role);
 
                     // tampilkan modal editModal
                     $('#editModal').modal('show');

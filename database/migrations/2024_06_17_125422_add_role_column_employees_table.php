@@ -9,13 +9,23 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    // public function up(): void
+    // {
+    //     Schema::table('employees', function (Blueprint $table) {
+    //         $table->enum('role', ['employee', 'admin'])
+    //             ->default('employee');
+    //     });
+    // }
+
+    public function up()
     {
+    if (!Schema::hasColumn('employees', 'role')) {
         Schema::table('employees', function (Blueprint $table) {
-            $table->enum('role', ['employee', 'admin'])
-                ->default('employee');
+            $table->enum('role', ['employee', 'admin'])->default('employee');
         });
     }
+    }
+
 
     /**
      * Reverse the migrations.

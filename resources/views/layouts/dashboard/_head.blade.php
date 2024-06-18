@@ -19,3 +19,6 @@
  <link href='fullcalendar/list/main.css' rel='stylesheet' />
 
  <link rel="stylesheet" href="css/flatpickr.min.css">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
