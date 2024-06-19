@@ -16,12 +16,12 @@
                     aria-describedby="user-list-page-info">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Phone Number</th>
+                            <th>Nama</th>
+                            <th>Nomor Telepon</th>
                             <th>Email</th>
                             {{-- <th>Role</th> --}}
-                            <th>Join Date</th>
-                            <th>Action</th>
+                            <th>Tanggal Bergabung</th>
+                            <th>Sunting</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,7 +30,7 @@
                                 <td>{{ $employee->name }}</td>
                                 <td>
                                     @if ($employee->phone_number == null)
-                                        <span class="badge badge-secondary">Belum diisi</span>
+                                        <span class="badge badge-secondary">Belum Diisi</span>
                                     @else
                                         {{ $employee->phone_number }}
                                     @endif
@@ -72,7 +72,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Tambah Pengguna</h5>
+                    <h5 class="modal-title" id="addModalLabel">Tambah Data Kurir</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -90,7 +90,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="addPhoneNumber">Phone Number</label>
+                            <label for="addPhoneNumber">Nomor Telepon</label>
                             <input required type="text" class="form-control" id="addPhoneNumber" name="phone_number">
                         </div>
 
@@ -121,7 +121,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="editModalLabel">Ubah Pengguna</h5>
+                    <h5 class="modal-title" id="editModalLabel">Ubah Data Kurir</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -139,7 +139,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="editPhoneNumber">Phone Number</label>
+                            <label for="editPhoneNumber">Nomor Telepon</label>
                             <input required type="text" class="form-control" id="editPhoneNumber"
                                 name="phone_number">
                         </div>
@@ -253,7 +253,7 @@
                 email: $('#editEmail').val(),
                 // password: $('#editPassword').val(),
                 // role: $('#editRole').val(),
-                // _method: 'PUT'
+                _method: 'PUT'
             }
 
             // kirim data ke server POST /employees
