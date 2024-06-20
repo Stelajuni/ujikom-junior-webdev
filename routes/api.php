@@ -13,3 +13,5 @@ Route::group(['as' => 'api.'], function () {
     Route::resource('employees', EmployeeController::class)
         ->except(['create', 'edit']);
 });
+
+
