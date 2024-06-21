@@ -4,7 +4,7 @@
     <div class="iq-card">
         <div class="iq-card-header d-flex justify-content-between align-items-center">
             <div class="iq-header-title">
-                <h4 class="card-title">Courier Details</h4>
+                <h4 class="card-title">Dashboard</h4>
             </div>
         </div>
         <div class="iq-card-body">
@@ -16,6 +16,7 @@
                             <th>Nama</th>
                             <th>Nomor Telepon</th>
                             <th>Email</th>
+                            <th>Alamat</th>
                             <th>Tanggal Bergabung</th>
                         </tr>
                     </thead>
@@ -31,6 +32,7 @@
                                     @endif
                                 </td>
                                 <td>{{ $employee->email }}</td>
+                                <td>{{ $employee->alamat }}</td>
                                 <td>{{ $employee->created_at->format('d M Y, H:i:s') }}</td>
                             </tr>
                         @endforeach

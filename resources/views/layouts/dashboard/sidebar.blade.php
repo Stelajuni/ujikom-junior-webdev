@@ -1,7 +1,7 @@
 <div class="iq-sidebar">
     <div class="iq-navbar-logo d-flex justify-content-between">
         <a href="index.html" class="header-logo">
-            <img src="images/logo.png" class="img-fluid rounded" alt="">
+            <img src="images/nusantara.svg" class="img-fluid rounded" alt="">
             <span>Nusantara Express</span>
         </a>
         <div class="iq-menu-bt align-self-center">
@@ -12,24 +12,6 @@
         </div>
     </div>
 
-    {{-- <div id="sidebar-scrollbar">
-        <nav class="iq-sidebar-menu">
-            <ul id="iq-sidebar-toggle" class="iq-menu">
-                <li class="
-                ">
-                    <a href="{{ route('dashboard') }}" class="iq-waves-effect"><i
-                            class="ri-dashboard-fill"></i><span>Dashboard</span></a>
-                </li>
-
-                <li class="
-                ">
-                    <a href="{{ route('users.index') }}" class="iq-waves-effect"><i
-                            class="ri-dashboard-fill"></i><span>User</span></a>
-                </li>
-            </ul>
-        </nav>
-        <div class="p-3"></div>
-    </div> --}}
     <div id="sidebar-scrollbar">
         <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="iq-menu">
@@ -50,7 +32,7 @@
                 ">
                     <a href="{{ route('employees.index')}}" class="iq-waves-effect" ><span
                         class="ripple rippleEffect"></span><i
-                        class="lab la-elementor iq-arrow-left"></i><span>Courier Details</span></a>
+                        class="lab la-elementor iq-arrow-left"></i><span>Detail Kurir</span></a>
                 </li>
 
                 <li class="

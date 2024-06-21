@@ -8,7 +8,7 @@
                 </div>
                 <div class="iq-navbar-logo d-flex justify-content-between ml-3">
                     <a href="index.html" class="header-logo">
-                        <img src="images/logo.png" class="img-fluid rounded" alt="">
+                        <img src="images/nusantara.svg" class="img-fluid rounded" alt="">
                         <span>Nusantara Express</span>
                     </a>
                 </div>
@@ -25,16 +25,12 @@
                 <li class="line-height">
                     <a href="#" class="search-toggle iq-waves-effect d-flex align-items-center">
                         <img src="images/user/1.jpg" class="img-fluid rounded mr-3" alt="user">
-                        {{-- <div class="caption">
-                            <h6 class="mb-0 line-height">Log Out</h6>
-                        </div> --}}
                     </a>
                     <div class="iq-sub-dropdown iq-user-dropdown">
                         <div class="iq-card shadow-none m-0">
                             <div class="iq-card-body p-0 ">
                                 <div class="bg-primary p-3">
                                     <h5 class="mb-0 text-white line-height">Hello {{ auth()->user()->name }}</h5>
-                                    <span class="text-white font-size-12">Have a nice day🥳</span>
                                 </div>
                                 <div class="d-inline-block w-100 text-center p-3">
                                     <a class="bg-primary iq-sign-btn" href="{{route('logout')}}" role="button">Sign

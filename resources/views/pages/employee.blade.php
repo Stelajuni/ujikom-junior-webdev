@@ -4,7 +4,7 @@
     <div class="iq-card">
         <div class="iq-card-header d-flex justify-content-between align-items-center">
             <div class="iq-header-title">
-                <h4 class="card-title">Courier Details</h4>
+                <h4 class="card-title">Detail Kurir</h4>
             </div>
             <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#addModal">
                 <i class="las la-plus"></i>Tambah
@@ -19,7 +19,7 @@
                             <th>Nama</th>
                             <th>Nomor Telepon</th>
                             <th>Email</th>
-                            {{-- <th>Role</th> --}}
+                            <th>Alamat</th>
                             <th>Tanggal Bergabung</th>
                             <th>Sunting</th>
                         </tr>
@@ -36,6 +36,7 @@
                                     @endif
                                 </td>
                                 <td>{{ $employee->email }}</td>
+                                <td>{{ $employee->alamat }}</td>
                                 {{-- <td>
                                     @if ($employee->role == 'admin')
                                         <span class="badge badge-primary">
@@ -94,6 +95,11 @@
                             <input required type="text" class="form-control" id="addPhoneNumber" name="phone_number">
                         </div>
 
+                        <div class="form-group">
+                            <label for="addAlamat">Alamat</label>
+                            <input required type="alamat" class="form-control" id="addAlamat" name="alamat">
+                        </div>
+
                         {{-- <div class="form-group">
                             <label for="addRole">Role</label>
                             <select class="form-control" id="addRole" name="role">
@@ -142,6 +148,11 @@
                             <label for="editPhoneNumber">Nomor Telepon</label>
                             <input required type="text" class="form-control" id="editPhoneNumber"
                                 name="phone_number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editAlamat">Alamat</label>
+                            <input required type="alamat" class="form-control" id="editAlamat" name="alamat">
                         </div>
 
                         {{-- <div class="form-group">
@@ -194,7 +205,7 @@
                 name: $('#addName').val(),
                 phone_number: $('#addPhoneNumber').val(),
                 email: $('#addEmail').val(),
-                // password: $('#addPassword').val(),
+                alamat: $('#addAlamat').val(),
                 // role: $('#addRole').val() // pastikan role juga disertakan
             }
 
@@ -251,7 +262,7 @@
                 name: $('#editName').val(),
                 phone_number: $('#editPhoneNumber').val(),
                 email: $('#editEmail').val(),
-                // password: $('#editPassword').val(),
+                alamat: $('#editAlamat').val(),
                 // role: $('#editRole').val(),
                 _method: 'PUT'
             }
@@ -345,7 +356,7 @@
                     $('#editName').val(response.data.name);
                     $('#editPhoneNumber').val(response.data.phone_number);
                     $('#editEmail').val(response.data.email);
-                    // $('#editRole').val(response.data.role);
+                    $('#editAlamat').val(response.data.alamat);
 
                     // tampilkan modal editModal
                     $('#editModal').modal('show');

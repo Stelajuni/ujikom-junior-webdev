@@ -32,10 +32,12 @@ class EmployeeController extends Controller
                 'email',
                 'unique:employees,email'
             ],
-            // 'password'  => [
-            //     'required',
-            //     'min:8'
-            // ],
+            'alamat'  => [
+                'required',
+                'string',
+                'min:3',
+                'max:255'
+            ],
             // 'role'  => [
             //     'required',
             //     'in:admin,employee'
@@ -92,10 +94,12 @@ class EmployeeController extends Controller
                 'email',
                 'unique:employees,email,' . $id
             ],
-            // 'password'  => [
-            //     'nullable',
-            //     'min:8'
-            // ],
+            'alamat'  => [
+                'required',
+                'string',
+                'min:3',
+                'max:255'
+            ],
             // 'role'  => [
             //     'required',
             //     'in:admin,employee'
