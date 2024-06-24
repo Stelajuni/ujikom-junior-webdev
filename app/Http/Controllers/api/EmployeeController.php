@@ -38,6 +38,10 @@ class EmployeeController extends Controller
                 'min:3',
                 'max:255'
             ],
+            'phone_number'  => [
+                'nullable',
+            ],
+
             // 'role'  => [
             //     'required',
             //     'in:admin,employee'
