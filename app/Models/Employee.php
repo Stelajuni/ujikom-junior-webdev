@@ -21,9 +21,9 @@ class Employee extends Authenticatable
         'phone_number',
         'email',
         'alamat',
-        'password',
-        'avatar',
-        'role'
+        // 'password',
+        // 'avatar',
+        // 'role'
     ];
 
     /**

@@ -17,7 +17,7 @@ class EmployeeController extends Controller
 
     public function showDashboard()
     {
-        $employees = Employee::all(); // Fetch all employees from the database
-        return view('pages.dashboard', compact('employees')); // Pass the employees data to the view
+        $employees = Employee::all();
+        return view('pages.dashboard', compact('employees'));
     }
 }

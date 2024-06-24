@@ -206,7 +206,6 @@
                 phone_number: $('#addPhoneNumber').val(),
                 email: $('#addEmail').val(),
                 alamat: $('#addAlamat').val(),
-                // role: $('#addRole').val() // pastikan role juga disertakan
             }
 
             // kirim data ke server POST /employees
