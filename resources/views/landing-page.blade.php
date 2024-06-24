@@ -28,14 +28,6 @@
 
     <!-- Main CSS File -->
     <link href="{{ asset ('')}}assets/css/main.css" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: Arsha
-  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-  * Updated: Jun 14 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -137,7 +129,7 @@
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Preloader -->
-    <div id="preloader"></div>
+    {{-- <div id="preloader"></div> --}}
 
     <!-- Vendor JS Files -->
     <script src="{{ asset ('')}}assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

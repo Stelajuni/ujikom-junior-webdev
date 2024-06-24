@@ -4,7 +4,7 @@
     <div class="iq-card">
         <div class="iq-card-header d-flex justify-content-between align-items-center">
             <div class="iq-header-title">
-                <h4 class="card-title">User List</h4>
+                <h4 class="card-title">Data Pengguna</h4>
             </div>
         </div>
         <div class="iq-card-body">
