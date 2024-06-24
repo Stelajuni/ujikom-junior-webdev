@@ -42,7 +42,7 @@
                 ">
                     <a href="{{ route('users.index') }}" class="iq-waves-effect" ><span
                         class="ripple rippleEffect"></span><i
-                        class="las la-user-tie iq-arrow-left"></i><span>User</span></a>
+                        class="las la-user-tie iq-arrow-left"></i><span>Pengguna</span></a>
                 </li>
 
             </ul>
