@@ -28,7 +28,7 @@
                                             id="exampleInputEmail1" placeholder="Your Full Name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail2">Email address</label>
+                                        <label for="exampleInputEmail2">Email Address</label>
                                         <input name= "email" type="email" class="form-control mb-0"
                                             id="exampleInputEmail2" placeholder="Enter email">
                                     </div>

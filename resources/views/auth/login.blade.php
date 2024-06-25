@@ -23,13 +23,13 @@
                                     @csrf
 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
+                                        <label for="exampleInputEmail1">Email Address</label>
                                         <input name= "email" type="email" class="form-control mb-0" id="exampleInputEmail1"
                                             placeholder="Enter email">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Password</label>
-                                        <a href="#" class="float-right">Forgot password?</a>
+                                        <a href="{{route('register')}}" class="float-right">Forgot password?</a>
                                         <input name= "password" type="password" class="form-control mb-0" id="exampleInputPassword1"
                                             placeholder="Password">
                                     </div>
