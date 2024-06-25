@@ -9,10 +9,6 @@ Route::get('/', function () {
     return view('landing-page');
 });
 
-// Route::get('/dashboard', function () {
-//     return view('layouts.dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

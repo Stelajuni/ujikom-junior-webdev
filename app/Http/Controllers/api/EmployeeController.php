@@ -41,30 +41,7 @@ class EmployeeController extends Controller
             'phone_number'  => [
                 'nullable',
             ],
-
-            // 'role'  => [
-            //     'required',
-            //     'in:admin,employee'
-            // ],
-            // 'password_confirmation' => [
-            //     'required',
-            //     'same:password'
-            // ],
-            // 'avatar'    => [
-            //     'nullable',
-            //     'image',
-            //     'mimes:jpg,jpeg,png',
-            //     'max:2048' // 2MB
-            // ]
         ]);
-
-        // unggah avatar
-        // if ($request->hasFile('avatar')) {
-        //     $avatar = $request->file('avatar');
-        //     $avatarPath = $avatar->store('avatars', 'public');
-
-        //     $validated['avatar'] = $avatarPath;
-        // }
 
         // membuat emoloyee baru
         $employee = Employee::create($validated);
@@ -104,39 +81,10 @@ class EmployeeController extends Controller
                 'min:3',
                 'max:255'
             ],
-            // 'role'  => [
-            //     'required',
-            //     'in:admin,employee'
-            // ],
             'phone_number'  => [
                 'nullable',
             ],
-            // 'password_confirmation' => [
-            //     'required',
-            //     'same:password'
-            // ],
-            // 'avatar'    => [
-            //     'nullable',
-            //     'image',
-            //     'mimes:jpg,jpeg,png',
-            //     'max:2048' // 2MB
-            // ]
         ]);
-
-        // unggah avatar
-        // if ($request->hasFile('avatar')) {
-        //     $avatar = $request->file('avatar');
-        //     $avatarPath = $avatar->store('avatars', 'public');
-
-        //     $validated['avatar'] = $avatarPath;
-        // }
-
-        // jika ada password baru, maka update password
-        // if ($request->filled('password')) {
-        //     $validated['password'] = bcrypt($validated['password']);
-        // } else {
-        //     unset($validated['password']);
-        // }
 
         $employee = Employee::find($id);
         $employee->update($validated);

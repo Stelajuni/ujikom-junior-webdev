@@ -37,17 +37,6 @@
                                 </td>
                                 <td>{{ $employee->email }}</td>
                                 <td>{{ $employee->alamat }}</td>
-                                {{-- <td>
-                                    @if ($employee->role == 'admin')
-                                        <span class="badge badge-primary">
-                                            <i class="ri-user-star-fill"></i>
-                                            Admin</span>
-                                    @else
-                                        <span class="badge badge-secondary">
-                                            <i class="ri-user-fill"></i>
-                                            Kurir</span>
-                                    @endif
-                                </td> --}}
                                 <td>{{ $employee->created_at->format('d M Y, H:i:s') }}</td>
                                 <td>
                                     <div class="flex align-items-center list-user-action">
@@ -99,19 +88,6 @@
                             <label for="addAlamat">Alamat</label>
                             <input required type="alamat" class="form-control" id="addAlamat" name="alamat">
                         </div>
-
-                        {{-- <div class="form-group">
-                            <label for="addRole">Role</label>
-                            <select class="form-control" id="addRole" name="role">
-                                <option value="admin">Admin</option>
-                                <option value="kurir" selected>Kurir</option>
-                            </select>
-                        </div> --}}
-
-                        {{-- <div class="form-group">
-                            <label for="addPassword">Password</label>
-                            <input required type="password" class="form-control" id="addPassword" name="password">
-                        </div> --}}
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -154,19 +130,6 @@
                             <label for="editAlamat">Alamat</label>
                             <input required type="alamat" class="form-control" id="editAlamat" name="alamat">
                         </div>
-
-                        {{-- <div class="form-group">
-                            <label for="editRole">Role</label>
-                            <select class="form-control" id="editRole" name="role">
-                                <option value="admin">Admin</option>
-                                <option value="kurir" selected>Kurir</option>
-                            </select>
-                        </div> --}}
-
-                        {{-- <div class="form-group">
-                            <label for="editPassword">Password</label>
-                            <input required type="password" class="form-control" id="editPassword" name="password">
-                        </div> --}}
                     </form>
                 </div>
                 <div class="modal-footer">

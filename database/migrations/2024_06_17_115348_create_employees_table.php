@@ -18,8 +18,6 @@ return new class extends Migration {
             $table->string('phone_number')->nullable();
             $table->string('email')->unique();
             $table->string('alamat');
-            // $table->string('avatar')->nullable();
-            // $table->string('role')->default('employee');
             $table->timestamps();
             $table->rememberToken();
         });
